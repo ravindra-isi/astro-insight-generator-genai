@@ -79,7 +79,8 @@ In the **second terminal window**, run the following `cURL` command to send a PO
 ```bash
 curl -X POST http://127.0.0.1:8000/horoscope \
 -H "Content-Type: application/json" \
--d '{"name": "Ritika", "birth_date": "1995-08-20"}'
+-d '{"name": "Ritika", "birth_date": "1995-08-20", "birth_time": "14:30", "birth_place": "Jaipur, India"}'
+
 ```
 
 > This sends a POST request with `name` and `birth_date` as JSON data to your Flask endpoint `/horoscope`.
@@ -95,7 +96,9 @@ curl -X POST http://127.0.0.1:8000/horoscope \
 ```json
 {
   "name": "Ritika",
-  "birth_date": "1995-08-20"
+  "birth_date": "1995-08-20",
+  "birth_time": "14:30",
+  "birth_place": "Jaipur, India"
 }
 ```
 
@@ -109,22 +112,6 @@ You should receive a JSON response like:
   "insight": "Your innate leadership and warmth will shine today. Embrace spontaneity and avoid overthinking.",
   "language": "en"
 }
-```
-
----
-
-## 📦 Folder Structure
-
-```
-astro-insight-generator-genai/
-├── app.py                  # Entry point for Flask app
-├── src/
-│   ├── zodiac_utils.py     # Zodiac sign logic (date to zodiac)
-│   ├── insight_generator.py # Insight generation logic with LLM
-│   └── __init__.py         # Initialization file for the src package
-├── .env                    # Environment variables (for API keys)
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
 ```
 
 ---

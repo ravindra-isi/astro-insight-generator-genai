@@ -44,7 +44,7 @@ def generate_insight(name: str, birth_date: str, birth_time: str, birth_place: s
     """
     llm = ChatOpenAI(
         api_key=os.getenv("OPENAI_API_KEY"),
-        model="gpt-4.1-nano",  
+        model="gpt-3.5-turbo",  
         temperature=0.7  
     )
 
@@ -70,10 +70,10 @@ def generate_insight(name: str, birth_date: str, birth_time: str, birth_place: s
     }
 
 #CLI test 
-if __name__ == "__main__":
-    print(generate_insight(
-        name="Gaurav",
-        birth_date="1999-09-05",
-        birth_time="12:05",
-        birth_place="Dhar, India"
-    ))
+# if __name__ == "__main__":
+#     print(generate_insight(
+#         name="Gaurav",
+#         birth_date="1999-09-05",
+#         birth_time="12:05",
+#         birth_place="Dhar, India"
+#     ))
