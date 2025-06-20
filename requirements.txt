@@ -4,8 +4,9 @@ pydantic==2.10.5
 
 # Web framework (choose one or both if needed)
 
-uvicorn==0.34.0
-flask
+uvicorn==0.18.3 
+flask==3.0.3
+
 
 # LangChain ecosystem
 langchain
@@ -15,10 +16,11 @@ langchain-huggingface
 langchain_experimental
 -e .
 
-
 # PDF parsing (for future: e.g., astrological texts or corpus)
 pypdf
 sentence-transformers==2.2.2
 
 # Utility
 requests==2.31.0
+
+
